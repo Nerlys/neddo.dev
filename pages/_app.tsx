@@ -10,13 +10,13 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Sven | full-stack engineer</title>
+        <title>Sven - Full Stack Engineer</title>
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://neddo.dev/" />
-        <meta property="og:title" content="Sven | full-stack engineer" />
+        <meta property="og:title" content="Sven - Full Stack Engineer" />
         <meta
           property="og:description"
-          content="An 18 year old full-stack engineer. Striving to have fun, while also making quality products."
+          content="An 18 year old full stack engineer. Striving to have fun, while also making quality products."
         />
         <link
           rel="icon"
@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           href="https://i.imgur.com/Fg9Qi95.png"
         />
         <meta property="og:image" content="https://i.imgur.com/Mn3HUDS.jpg" />
-        <meta name="theme-color" content="#080808" />
+        <meta name="theme-color" content="#2F3136" />
       </Head>
       <div className="duration-200 font-mono">
         <ThemeProvider
