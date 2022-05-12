@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>Sven - Full Stack Engineer</title>
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://neddo.dev/" />
-        <meta property="og:title" content="Sven - Full Stack Engineer" />
+        <meta property="og:title" content="Hiya! I'm Sven!" />
         <meta
           property="og:description"
           content="An 18 year old full stack engineer. Striving to have fun, while also making quality products."
