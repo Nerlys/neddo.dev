@@ -44,12 +44,12 @@ const Home: NextPage = () => {
           <ContactCard
             User="Neddo#0001"
             IconName="akar-icons:discord-fill"
-            Link="mailto:me@neddo.dev"
+            Link="https://discordapp.com/users/246895281940070400"
           />
           <ContactCard
             User="me@neddo.dev"
             IconName="akar-icons:envelope"
-            Link="https://discordapp.com/users/246895281940070400"
+            Link="mailto:me@neddo.dev"
           />
         </div>
       </div>
