@@ -30,7 +30,7 @@ const Home: NextPage = () => {
       </div>
       <div className="mt-16 flex-col space-y-6">
         <div className="font-bold text-3xl">Contact</div>
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-6">
           <ContactCard
             User="Neddoo"
             IconName="akar-icons:github-fill"
