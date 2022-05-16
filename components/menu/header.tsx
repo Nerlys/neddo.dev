@@ -1,4 +1,4 @@
-import { ThemeSwitcher } from "../components/theme-switcher";
+import { ThemeSwitcher } from "../buttons/theme-switcher";
 
 import NextLink from "next/link";
 import { useRouter } from "next/router";

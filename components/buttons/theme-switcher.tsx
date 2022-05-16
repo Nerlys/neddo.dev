@@ -2,7 +2,7 @@ import { useTheme } from "next-themes";
 import { useMemo } from "react";
 import { Icon } from "@iconify/react";
 
-import { ThemeType } from "../types/theme";
+import { ThemeType } from "../../types/theme";
 
 export function ThemeSwitcher() {
   const { theme, setTheme } = useTheme();

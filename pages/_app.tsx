@@ -2,9 +2,9 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
 import { ThemeType } from "../types/theme";
-import { Header } from "../components/header";
+import { Header } from "../components/menu/header";
 import Head from "next/head";
-import { Footer } from "../components/footer";
+import { Footer } from "../components/menu/footer";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

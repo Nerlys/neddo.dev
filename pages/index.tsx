@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
-import { ProjectCard } from "../components/project-card";
-import { ContactCard } from "../components/contact-card";
-import { Footer } from "../components/footer";
+import { ProjectCard } from "../components/cards/project-card";
+import { ContactCard } from "../components/cards/contact-card";
+import { Footer } from "../components/menu/footer";
 
 const Home: NextPage = () => {
   return (

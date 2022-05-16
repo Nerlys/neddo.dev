@@ -1,4 +1,4 @@
-import { Song } from "./spotify";
+import { Song } from "../spotify";
 import NextLink from "next/link";
 
 export function Footer() {
