@@ -9,7 +9,6 @@ const About: NextPage = () => {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ ease: "easeOut", duration: 0.15 }}
-      className="mt-36 w-full"
     >
       <div>No idea what to put here. lemme know or something idk.</div>
     </motion.div>
