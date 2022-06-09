@@ -5,8 +5,17 @@ import { ThemeType } from "../types/theme";
 import { Header } from "../components/menu/header";
 import Head from "next/head";
 import { Footer } from "../components/menu/footer";
+import { AnimatePresence } from "framer-motion";
+import { Router } from "next/router";
 
-function MyApp({ Component, pageProps }: AppProps) {
+import NProgress from "nprogress"
+import "nprogress/nprogress.css";
+
+Router.events.on("routeChangeStart", () => NProgress.start());
+Router.events.on("routeChangeComplete", () => NProgress.done());
+Router.events.on("routeChangeError", () => NProgress.done());
+
+function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <>
       <Head>
@@ -34,7 +43,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         >
           <div className="max-w-3xl mx-auto px-5 md:px-0">
             <Header />
-            <Component {...pageProps} />
+            <AnimatePresence exitBeforeEnter>
+              <Component {...pageProps} key={router.pathname}/>
+            </AnimatePresence>
             <Footer />
           </div>
         </ThemeProvider>

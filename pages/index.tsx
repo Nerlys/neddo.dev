@@ -3,18 +3,23 @@ import { ProjectCard } from "../components/cards/project-card";
 import { ContactCard } from "../components/cards/contact-card";
 import { Footer } from "../components/menu/footer";
 
+import { motion } from "framer-motion";
+
 const Home: NextPage = () => {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.95 }}
+      transition={{ ease: "easeOut", duration: 0.15 }}
+      className="mt-36 w-full"
+    >
       <div className="flex flex-col space-y-4">
         <div>
           <div className="font-bold text-4xl">
-            Hiya! I&apos;m Sven!{" "}
-            <span className="wave">👋</span>
+            Hiya! I&apos;m Sven! <span className="wave">👋</span>
           </div>
-          <div className="font-bold">
-            An 18 year old full-stack engineer.
-          </div>
+          <div className="font-bold">An 18 year old full-stack engineer.</div>
         </div>
         <div className="text-normal opacity-50">
           Striving to have fun, while also making quality products.
@@ -53,7 +58,7 @@ const Home: NextPage = () => {
           />
         </div>
       </div>
-    </>
+    </motion.div>
   );
 };
 
