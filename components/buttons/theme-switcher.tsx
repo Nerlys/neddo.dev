@@ -17,7 +17,7 @@ export function ThemeSwitcher() {
 
   return (
     <div
-      className="flex p-2 rounded-xl border-2 hover:border-green-400 duration-200 hover:cursor-pointer"
+      className="flex p-2 rounded-xl border-2 hover:border-neutral-400 duration-200 hover:cursor-pointer"
       onClick={() => setTheme(isDark ? "light" : "dark")}
     >
       <Icon

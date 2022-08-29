@@ -12,7 +12,7 @@ export function Footer() {
           <div className="grid grid-flow-row gap-3">
             <div className="opacity-50 hover:opacity-100 duration-200"><NextLink href={"./"}>Home</NextLink></div>
             <div className="opacity-50 hover:opacity-100 duration-200"><NextLink href={"/about"}>About</NextLink></div>
-            <div className="opacity-50 hover:opacity-100 duration-200"><NextLink href={"/blog"}>Blog</NextLink></div>
+            <div className="opacity-50 hover:opacity-100 duration-200"><NextLink href={"/portfolio"}>Portfolio</NextLink></div>
           </div>
           <div className="grid grid-flow-row gap-3">
             <div className="opacity-50 hover:opacity-100 duration-200"><NextLink href={"https://github.com/Neddoo"}>Github</NextLink></div>

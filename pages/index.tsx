@@ -4,6 +4,7 @@ import { ContactCard } from "../components/cards/contact-card";
 import { Footer } from "../components/menu/footer";
 
 import { motion } from "framer-motion";
+import { Hero } from '../components/cards/Hero'
 
 const Home: NextPage = () => {
   return (
@@ -14,22 +15,19 @@ const Home: NextPage = () => {
       transition={{ ease: "easeOut", duration: 0.15 }}
     >
       <div className="flex flex-col space-y-4">
-        <div>
-          <div className="font-bold text-4xl">
-            Hiya! I&apos;m Sven! <span className="wave">👋</span>
-          </div>
-          <div className="font-bold">An 18 year old full-stack engineer.</div>
-        </div>
-        <div className="text-normal opacity-50">
-          Striving to have fun, while also making quality products.
-        </div>
+      <Hero title='Hiya! I&apos;m Sven! 👋' subtitle='An 18 year old full-stack engineer.' button='Contact me' onClick={() => location.href='mailto:me@neddo.dev'}/>
       </div>
       <div className="mt-16 flex-col space-y-6">
         <div className="font-bold text-3xl">Highlighted Projects</div>
         <ProjectCard
           Title="neddo.dev"
-          Desc="My wonderful personal website made with Next.JS and TailwindCSS"
+          Desc="👨‍💻 My wonderful personal website"
           Link="https://github.com/neddoo/neddo.dev"
+        />
+        <ProjectCard
+          Title="blades"
+          Desc="🚀 The driving force of all my web based projects"
+          Link="https://github.com/neddoo/blades"
         />
       </div>
       <div className="mt-16 flex-col space-y-6">

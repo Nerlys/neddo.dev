@@ -29,7 +29,7 @@ export function Header() {
         <div className="flex items-center space-x-2">
           <NavItem href="/" text="Home" />
           <NavItem href="/about" text="About" />
-          <NavItem href="/blog" text="Blog" />
+          <NavItem href="/portfolio" text="Portfolio" />
         </div>
         <div>
           <ThemeSwitcher />
