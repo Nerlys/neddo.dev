@@ -1,10 +1,8 @@
 import type { NextPage } from "next";
 import { ProjectCard } from "../components/cards/project-card";
 import { ContactCard } from "../components/cards/contact-card";
-import { Footer } from "../components/menu/footer";
 
 import { motion } from "framer-motion";
-import { Hero } from '../components/cards/Hero'
 
 const Home: NextPage = () => {
   return (
