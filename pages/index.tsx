@@ -38,8 +38,8 @@ export default function Home(props: Props) {
           projects. I mostly write web based projects. I&apos;ve selected some
           of my favorite projects, which you can see down below!
         </div>
-        {projects.map((project) => (
-          <ProjectCard
+        {projects.map((project: any) => (
+          <ProjectCard 
             Title={project.repo}
             Desc={project.description}
             Link={`https://github.com/${project.owner}/${project.repo}`}
