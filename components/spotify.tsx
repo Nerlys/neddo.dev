@@ -8,7 +8,7 @@ export function Song() {
   const { data: user } = useLanyard(DISCORD_ID);
 
   const c =
-    "text-left select-none sm:select-text w-full inline-flex text-md rounded-sm focus:outline-none focus:opacity-100 focus:ring items-center space-x-2 no-underline opacity-50 hover:opacity-100 duration-200 h-12 mt-0.5";
+    "text-left select-none sm:select-text w-full inline-flex rounded-sm focus:outline-none focus:opacity-100 focus:ring items-center space-x-2 no-underline opacity-50 hover:opacity-100 duration-200 h-12";
 
   if (!user || !user.spotify) {
     return (
@@ -16,7 +16,7 @@ export function Song() {
         <span>
           <Icon icon='bi:spotify' />
         </span>
-        <span>Not playing anything</span>
+        <span></span>
       </p>
     );
   }

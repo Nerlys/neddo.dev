@@ -4,6 +4,8 @@ import NextLink from "next/link";
 import { useRouter } from "next/router";
 import cn from "classnames";
 
+import { Icon } from "@iconify/react";
+
 function NavItem({ href, text }: { href: string; text: string }) {
   const router = useRouter();
   const isActive = router.asPath === href;
@@ -26,13 +28,14 @@ export function Header() {
   return (
     <>
       <div className="flex justify-between py-5 mb-20">
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center">
           <NavItem href="/" text="Home" />
           <NavItem href="/about" text="About" />
           <NavItem href="/portfolio" text="Portfolio" />
         </div>
-        <div>
-          <ThemeSwitcher />
+        <div className="flex space-x-3 text-xl items-center">
+          <div className="opacity-50 hover:opacity-100 duration-200"><NextLink href={"https://github.com/Neddoo"}><Icon icon="akar-icons:github-fill" /></NextLink></div>
+          <div className="opacity-50 hover:opacity-100 duration-200"><NextLink href={"https://twitter.com/ItsNeddo"}><Icon icon="akar-icons:twitter-fill" /></NextLink></div>
         </div>
       </div>
     </>

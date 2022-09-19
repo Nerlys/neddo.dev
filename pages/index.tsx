@@ -1,10 +1,18 @@
 import type { NextPage } from "next";
 import { ProjectCard } from "../components/cards/project-card";
 import { ContactCard } from "../components/cards/contact-card";
+import { GetStaticProps } from "next";
+import { PinnedRepo } from "../hooks/github";
+import { useGitHubPinnedRepos } from "../hooks/github";
 
 import { motion } from "framer-motion";
 
-const Home: NextPage = () => {
+type Props = {
+  pinnedRepos: PinnedRepo[];
+};
+
+export default function Home(props: Props) {
+  const {data: projects = props.pinnedRepos} = useGitHubPinnedRepos('neddoo');
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
@@ -18,45 +26,23 @@ const Home: NextPage = () => {
         <div className="mb-4 text-lg opacity-50">Striving to make quality products, while also having fun</div>
       </div>
       <div className="mt-16 flex-col space-y-6">
-        <div className="font-bold text-3xl">Highlighted Projects</div>
-        <ProjectCard
-          Title="neddo.dev"
-          Desc="👨‍💻 My wonderful personal website"
-          Link="https://github.com/neddoo/neddo.dev"
-        />
-        <ProjectCard
-          Title="blades"
-          Desc="🚀 The driving force of all my web based projects"
-          Link="https://github.com/neddoo/blades"
-        />
-      </div>
-      <div className="mt-16 flex-col space-y-6">
-        <div className="font-bold text-3xl">Contact</div>
-        <div className="grid md:grid-cols-2 grid-cols-1 gap-6">
-          <ContactCard
-            User="Neddoo"
-            IconName="akar-icons:github-fill"
-            Link="https://github.com/Neddoo"
-          />
-          <ContactCard
-            User="ItsNeddo"
-            IconName="akar-icons:twitter-fill"
-            Link="https://twitter.com/ItsNeddo"
-          />
-          <ContactCard
-            User="Neddo#0001"
-            IconName="akar-icons:discord-fill"
-            Link="https://discordapp.com/users/246895281940070400"
-          />
-          <ContactCard
-            User="me@neddo.dev"
-            IconName="akar-icons:envelope"
-            Link="mailto:me@neddo.dev"
-          />
-        </div>
+        <div className="font-bold text-3xl">What I do 👨‍💻</div>
+        <div className="text-lg opacity-50">Currently I&apos;m studying Software Engineering at a school in The Netherlands. In my free time, you can see me working on personal projects. I mostly write web based projects. I&apos;ve selected some of my favorite projects, which you can see down below!</div>
+        {projects.map(project => (
+						<ProjectCard Title={project.repo} Desc={project.description} Link={`https://github.com/${project.owner}/${project.repo}`}/>
+					))}
       </div>
     </motion.div>
   );
 };
 
-export default Home;
+export const getStaticProps: GetStaticProps<Props> = async function () {
+  const pinnedRepos = await fetch(
+    'https://gh-pinned-repos.egoist.sh/?username=neddoo',
+  ).then(async response => response.json() as Promise<PinnedRepo[]>);
+
+  return {
+    props: { pinnedRepos },
+    revalidate: 120,
+  };
+};
