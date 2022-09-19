@@ -39,7 +39,7 @@ export default function Home(props: Props) {
           of my favorite projects, which you can see down below!
         </div>
         {projects.map((project: any) => (
-          <ProjectCard 
+          <ProjectCard key={project.repo}
             Title={project.repo}
             Desc={project.description}
             Link={`https://github.com/${project.owner}/${project.repo}`}
