@@ -34,8 +34,24 @@ export function Header() {
           <NavItem href="/portfolio" text="Portfolio" />
         </div>
         <div className="flex space-x-3 text-xl items-center">
-          <div className="opacity-50 hover:opacity-100 duration-200"><NextLink href={"https://github.com/Neddoo"}><Icon icon="akar-icons:github-fill" /></NextLink></div>
-          <div className="opacity-50 hover:opacity-100 duration-200"><NextLink href={"https://twitter.com/ItsNeddo"}><Icon icon="akar-icons:twitter-fill" /></NextLink></div>
+          <div className="opacity-50 hover:opacity-100 duration-200">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/Neddoo"
+            >
+              <Icon icon="akar-icons:github-fill" />
+            </a>
+          </div>
+          <div className="opacity-50 hover:opacity-100 duration-200">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://twitter.com/ItsNeddo"
+            >
+              <Icon icon="akar-icons:twitter-fill" />
+            </a>
+          </div>
         </div>
       </div>
     </>

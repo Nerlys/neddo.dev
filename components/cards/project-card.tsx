@@ -12,7 +12,7 @@ export function ProjectCard({
   return (
     <>
       <div>
-        <a href={Link}>
+        <a href={Link} target="_blank">
           <div className="p-5 border-2 rounded-xl hover:border-neutral-400 duration-300 cursor-pointer">
             <div className="font-bold text-lg">{Title}</div>
             <div className="opacity-50">{Desc}</div>
