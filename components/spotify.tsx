@@ -16,7 +16,7 @@ export function Song() {
         <span>
           <Icon icon='bi:spotify' />
         </span>
-        <span></span>
+        <span>The sound... of silence</span>
       </p>
     );
   }

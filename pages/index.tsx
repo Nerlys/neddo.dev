@@ -25,7 +25,7 @@ export default function Home(props: Props) {
         <div className="text-3xl font-bold">
           Hiya I&apos;m Sven! <span className="wave">👋</span>
         </div>
-        <div className="mb-4 text-xl">An 18 year old full-stack engineer.</div>
+        <div className="mb-4 text-xl">An 19 year old full-stack engineer.</div>
         <div className="mb-4 text-lg opacity-50">
           Striving to make quality products, while also having fun
         </div>
