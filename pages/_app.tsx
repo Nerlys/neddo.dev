@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       <div className="duration-200 font-mono">
         <ThemeProvider
           attribute="class"
-          defaultTheme={ThemeType.SYSTEM}
+          forcedTheme="dark"
           themes={Object.values(ThemeType)}
         >
           <div className="max-w-3xl mx-auto px-5 md:px-0">
