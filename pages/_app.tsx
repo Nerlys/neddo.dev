@@ -41,7 +41,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
           forcedTheme="dark"
           themes={Object.values(ThemeType)}
         >
-          <div className="max-w-3xl mx-auto px-5 md:px-0">
+          <div className="max-w-3xl mx-auto px-5 md:px-0 font-sans">
             <Header />
             <AnimatePresence exitBeforeEnter>
               <Component {...pageProps} key={router.pathname}/>

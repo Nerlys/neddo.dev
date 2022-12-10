@@ -22,10 +22,10 @@ export default function Home(props: Props) {
       transition={{ ease: "easeOut", duration: 0.15 }}
     >
       <div className="flex flex-col space-y-4">
-        <div className="text-3xl font-bold">
+        <div className="text-6xl font-black">
           Hiya I&apos;m Sven! <span className="wave">👋</span>
         </div>
-        <div className="mb-4 text-xl">An 19 year old full-stack engineer.</div>
+        <div className="mb-4 text-xl opacity-75">An 19 year old full-stack engineer.</div>
         <div className="mb-4 text-lg opacity-50">
           Striving to make quality products, while also having fun
         </div>

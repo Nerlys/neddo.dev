@@ -27,8 +27,8 @@ function NavItem({ href, text }: { href: string; text: string }) {
 export function Header() {
   return (
     <>
-      <div className="flex justify-between py-5 mb-20">
-        <div className="flex items-center">
+      <div className="flex justify-between py-5 mb-20 font-mono">
+        <div className="flex items-center text-lg font-bold">
           <NavItem href="/" text="Home" />
           <NavItem href="/about" text="About" />
           <NavItem href="/portfolio" text="Portfolio" />
