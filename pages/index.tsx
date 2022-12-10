@@ -52,7 +52,7 @@ export default function Home(props: Props) {
 
 export const getStaticProps: GetStaticProps<Props> = async function () {
   const pinnedRepos = await fetch(
-    "https://gh-pinned-repos.egoist.sh/?username=neddoo"
+    "https://gh-pinned.nxl.sh/api/user/neddoo"
   ).then(async (response) => response.json() as Promise<PinnedRepo[]>);
 
   return {
